@@ -1,4 +1,4 @@
-# Project Title
+# Avertizing Solution
 
 ## Description
 This project is a web application that showcases various promotional materials and products. It includes a collection of images and a user-friendly interface to navigate through them.
