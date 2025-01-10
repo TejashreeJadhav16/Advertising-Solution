@@ -1,0 +1,276 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light gray background for the whole page */
+  color: #333; /* Dark gray text */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366; /* Dark blue background */
+  color: white;
+  padding: 20px;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header h1 {
+  font-size: 1.5em;
+}
+
+.nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  animation: fadeIn 1s ease-out;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #3399FF; /* Light blue hover effect */
+}
+
+/* Hero Section */
+.hero {
+  background: url('assets/hero-image.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background-color: #003366; /* Dark blue background */
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  background-color: #4CAF50; /* Green button */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  animation: fadeIn 2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+  animation: buttonHover 0.6s ease-in-out;
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Services Section */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff; /* White background for services */
+  animation: fadeIn 1.5s ease-in;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+  color: #003366; /* Dark blue text for headings */
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service {
+  animation: fadeIn 2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+  width: 100%;
+  height: auto;
+  animation: zoomIn 1s ease-in;
+}
+
+.service h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #003366; /* Dark blue text for service titles */
+}
+
+.service p {
+  color: #555; /* Dark gray text for descriptions */
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in for the whole section */
+}
+
+.portfolio h2 {
+  margin-bottom: 40px;
+  color: #003366;
+  animation: slideInFromLeft 1.5s ease-out; /* Slide in the heading from the left */
+}
+
+.portfolio-gallery {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-in; /* Fade-in for the gallery container */
+}
+
+.portfolio-gallery img {
+  width: 30%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: zoomIn 1.5s ease-in-out; /* Zoom-in effect for images on load */
+}
+
+.portfolio-gallery img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+
+/* About Us Section */
+.about {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 50px 20px;
+  text-align: center;
+  animation: slideInFromLeft 1.5s ease-out;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.contact p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #3399FF; /* Light blue links */
+  text-decoration: none;
+  animation: fadeIn 2s ease-in;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #003366; /* Dark blue hover effect */
+  animation: buttonHover 0.6s ease-in-out;
+}
+
+.additional-info {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.additional-info h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: #003366; /* Dark blue heading */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #003366; /* Dark blue background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in;
+}
